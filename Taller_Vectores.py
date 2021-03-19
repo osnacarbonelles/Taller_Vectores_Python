@@ -245,28 +245,71 @@ def simetrico(listaNumeros):
 simetrico(listaNumeros)
 
 
+"""
+7. Dado dos vectores númericos A y B debe realizar las siguiente operaciones
+con conjuntos:
+a. Unión: Conjunto que contiene(sin repetir) los elementos de A y B.
+b. Intersección: Conjunto que contiene los elementos comunes que
+aparecen en los conjuntos A y B
+c. Diferencia(A-B) Conjunto formado por los elementos que pertenecen
+al conjunto A y no pertenecen al conjunto B.
+d. Diferencia (B-A) Conjunto formado por los elementos que pertenecen
+al conjunto B y no pertenecel al conjunto A.
+"""
+# Capturar datos para el vector A
+i = 1
+listaNumeros1 = []
+while True:
+    numero = int(input(f'Digite cualquier número para el vector A. '
+                       'Si desea salir digite 0: '))
+    if numero == 0:
+        break
+    listaNumeros1.append(numero)
+    i += 1
+print(f'Los numeros ingresados para el vector A fueron: {listaNumeros1}')
+
+# Capturar datos para el vector B
+j = 1
+listaNumeros2 = []
+while True:
+    numero = int(input(f'Digite cualquier número para el vector B. '
+                       'Si desea salir digite 0: '))
+    if numero == 0:
+        break
+    listaNumeros2.append(numero)
+    j += 1
+print(f'Los numeros ingresados para el vector B fueron: {listaNumeros2}')
+
+listaUnion = []
+listaInterseccion = []
+listadiferenciaAB = []
+listadiferenciaBA = []
 
 
+def union(a, b):
+    listaUnion = set(a) | set(b)
+    return print(f'La lista resultante de la union es: {listaUnion}')
 
 
+def interseccion(a, b):
+    listaInterseccion = set(a) & set(b)
+    return print(f'La lista resultante de la Interseccion es: '
+                 f'{listaInterseccion}')
 
 
+def diferenciaAB(a, b):
+    listadiferenciaAB = set(a) - set(b)
+    return print(f'La lista resultante de la Diferencia(A-B) es: '
+                 f'{listadiferenciaAB}')
 
 
+def diferenciaBA(a, b):
+    listadiferenciaBA = set(b) - set(a)
+    return print(f'La lista resultante de la Diferencia(B-A) es: '
+                 f'{listadiferenciaBA}')
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+union(listaNumeros1, listaNumeros2)
+interseccion(listaNumeros1, listaNumeros2)
+diferenciaAB(listaNumeros1, listaNumeros2)
+diferenciaBA(listaNumeros1, listaNumeros2)
