@@ -160,6 +160,34 @@ sumaListas(listaNumeros1, listaNumeros2)
 restaListas(listaNumeros1, listaNumeros2)
 
 
+"""
+4. De los n elementos de un vector dado identifique el número que mas se
+repite e indique cual es.
+"""
+i = 1
+listaNumeros = []
+while True:
+    numero = int(input(f'Digite cualquier número. Si desea salir digite 0: '))
+    if numero == 0:
+        break
+    listaNumeros.append(numero)
+    i += 1
+print(f'Los numeros ingresados fueron: {listaNumeros}')
+
+
+def vecesRepetido(listaNumeros):
+    contador = 0
+    num_repetido = 0
+    for i in listaNumeros:
+        frecuencia = listaNumeros.count(i)
+        if frecuencia > contador:
+            contador = frecuencia
+            num_repetido = i
+    return print(f'El número que mas se repite es {num_repetido}'
+                 f' con {contador} cantidad de veces')
+
+
+vecesRepetido(listaNumeros)
 
 
 
