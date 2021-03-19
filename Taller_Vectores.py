@@ -190,6 +190,30 @@ def vecesRepetido(listaNumeros):
 vecesRepetido(listaNumeros)
 
 
+"""
+5. Dado un Vector v de longitud par, divida en 2 partes, en la primera parte
+realice la productoria y en la segunda la sumatoria. Entregue los valores
+resultantes.
+"""
+i = 1
+listaNumeros = []
+while True:
+    numero = int(input(f'Digite cualquier número. Si desea salir digite 0: '))
+    if numero == 0:
+        break
+    listaNumeros.append(numero)
+    i += 1
+print(f'Los numeros ingresados fueron: {listaNumeros}')
+
+
+def dividirLista(listaNumeros):
+    mitad = len(listaNumeros)//2
+    return listaNumeros[:mitad], listaNumeros[mitad:]
+
+
+listaNumerosB, listaNumerosC = dividirLista(listaNumeros)
+productoria(listaNumerosB)  # se utiliza la funcion del primer ejercicio
+sumatoria(listaNumerosC)  # se utiliza la funcion del primer ejercicio
 
 
 
