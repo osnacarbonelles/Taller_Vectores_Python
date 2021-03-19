@@ -110,6 +110,56 @@ impar(listaNumeros)
 primos(listaNumeros)
 
 
+"""
+3. Dado un Vector v y un Vector v1 de cómo resultado un Vector resultante de
+las siguientes operaciones:
+a. Suma
+b. Resta
+"""
+# Capturar datos para el vector v
+i = 1
+listaNumeros1 = []
+while True:
+    numero = int(input(f'Digite cualquier número para el vector v. '
+                       'Si desea salir digite 0: '))
+    if numero == 0:
+        break
+    listaNumeros1.append(numero)
+    i += 1
+print(f'Los numeros ingresados para el vector v fueron: {listaNumeros1}')
+
+# Capturar datos para el vector v1
+j = 1
+listaNumeros2 = []
+while True:
+    numero = int(input(f'Digite cualquier número para el vector v1. '
+                       'Si desea salir digite 0: '))
+    if numero == 0:
+        break
+    listaNumeros2.append(numero)
+    j += 1
+print(f'Los numeros ingresados para el vector v fueron: {listaNumeros2}')
+
+listaResultanteSuma = []
+listaResultanteResta = []
+
+
+def sumaListas(a, b):
+    for i in range(len(a)):
+        listaResultanteSuma.append(a[i] + b[i])
+    return print(f'La lista de la Suma resultante es: {listaResultanteSuma}')
+
+
+def restaListas(a, b):
+    for i in range(len(b)):
+        listaResultanteResta.append(b[i] - a[i])
+    return print(f'La lista de la Resta resultante es: {listaResultanteResta}')
+
+
+sumaListas(listaNumeros1, listaNumeros2)
+restaListas(listaNumeros1, listaNumeros2)
+
+
 
 
 
